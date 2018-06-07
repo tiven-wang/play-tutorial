@@ -1,0 +1,9 @@
+---
+applications:
+- name: play-scala-starter
+  memory: 1024M
+  instances: 1
+  host: play-scala-starter
+  domain: cfapps.io
+  path: target/universal/play-scala-starter-example-1.0-SNAPSHOT.zip
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
