@@ -9,8 +9,11 @@ GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
-GET     /tweets                     controllers.HomeController.tweets
-
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(file)
 
+GET     /tweets                     controllers.TweetController.list
+POST    /tweets                     controllers.TweetController.create
+GET     /tweets/:id                 controllers.TweetController.details(id: Long)
+PUT     /tweets/:id                 controllers.TweetController.update(id: Long)
+DELETE  /tweets/:id                 controllers.TweetController.delete(id: Long)
